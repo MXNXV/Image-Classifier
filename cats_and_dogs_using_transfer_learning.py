@@ -24,20 +24,7 @@ logger.setLevel(logging.ERROR)
 _URL = 'https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip'
 zip_dir = tf.keras.utils.get_file('cats_and_dogs_filterted.zip', origin=_URL, extract=True)
 
-"""The dataset we have downloaded has the following directory structure.
 
-<pre style="font-size: 10.0pt; font-family: Arial; line-height: 2; letter-spacing: 1.0pt;" >
-<b>cats_and_dogs_filtered</b>
-|__ <b>train</b>
-    |______ <b>cats</b>: [cat.0.jpg, cat.1.jpg, cat.2.jpg ...]
-    |______ <b>dogs</b>: [dog.0.jpg, dog.1.jpg, dog.2.jpg ...]
-|__ <b>validation</b>
-    |______ <b>cats</b>: [cat.2000.jpg, cat.2001.jpg, cat.2002.jpg ...]
-    |______ <b>dogs</b>: [dog.2000.jpg, dog.2001.jpg, dog.2002.jpg ...]
-</pre>
-
-We can list the directories with the following terminal command:
-"""
 
 zip_dir_base = os.path.dirname(zip_dir)
 !find $aip_dir_base -type d -print
